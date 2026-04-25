@@ -37,6 +37,69 @@ Power BI – Dashboard development and visualization
 
 ##🔍 SQL Analysis
 
+```
+--combining the year order tables
+WITH all_order AS(
+SELECT 
+OrderID,
+CustomerID,
+ProductID,
+OrderDate,
+Quantity,
+Revenue,
+COGS
+FROM Orders_2023
+
+UNION ALL
+
+SELECT 
+OrderID,
+CustomerID,
+ProductID,
+OrderDate,
+Quantity,
+Revenue,
+COGS
+FROM Orders_2024
+
+UNION ALL
+
+SELECT 
+OrderID,
+CustomerID,
+ProductID,
+OrderDate,
+Quantity,
+Revenue,
+COGS
+FROM Orders_2025)
+--- building the main dataset query
+SELECT
+a.OrderID,
+a.CustomerID,
+c.Region,
+a.OrderDate,
+DATEPART(WEEK,a.OrderDate) as week_number,
+DATEPART(YEAR,a.OrderDate) as years,
+c.CustomerJoinDate,
+a.Quantity,
+a.Revenue,
+CASE when a.Revenue is null then p.price*a.Quantity else a.Revenue END Cleaned_Revenue,
+a.Revenue - a.COGS as profit,
+a.COGS,
+p.ProductName,
+p.ProductCategory,
+p.Price,
+p.Base_Cost
+FROM all_order a
+left join customers c
+on a.CustomerID = c.CustomerID
+left join products p
+on a.ProductID = p.ProductID
+where a.CustomerID is not null --- drop non customerID
+
+```
+
  Data Preparation
  
 Handled NULL values
