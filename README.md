@@ -26,3 +26,83 @@ Analyze trends in Gross Margin Percentage over time
 Evaluate revenue distribution across categories, products, and regions
 
 Provide actionable recommendations to improve pricing strategy
+
+## 🛠️ Tools & Technologies
+
+SQL Server – Data cleaning, transformation, and analysis
+
+Excel – Data validation
+
+Power BI – Dashboard development and visualization
+
+##🔍 SQL Analysis
+
+ Data Preparation
+ 
+Handled NULL values
+
+Created calculated fields 
+
+Aggregated data by Year, Product, Category, and Region
+
+
+## 📊 Dashboard Features
+
+
+The Power BI dashboard includes:
+
+ Year-over-Year GMP Trend
+ 
+ Revenue by Category
+ 
+ Revenue by Product
+ 
+ Revenue by Region
+ 
+ Highlight of Low Margin Products (<30%)
+
+
+## 💡 Key Insights
+Several products in Q3 2025 recorded GMP below 30%, indicating profitability issues
+
+Rising COGS significantly impacted margins across multiple categories
+
+Some high-revenue products generated low profit margins, reducing overall profitability
+
+Regional differences suggest pricing inconsistencies or cost variations
+
+## PRICING RECOMMENDATIONS
+
+Based on the analysis of Gross Margin Percentage (GMP), some products are not making enough profit. Below are the key actions to take:
+
+# 1. Review Low-Margin Products
+
+The following products have very low profit margins and need urgent attention:
+
+Chemex Filters (100 pack) – 14.58%
+
+Minutoist Keychain – 15.59%
+
+Logo Hoodie (Black) – 16.34%
+
+For these products, the company should either:
+
+Stop selling them (discontinue), or
+
+Increase their prices by at least 25% to improve profitability
+
+# 2. Adjust Pricing for Key Product
+
+The Gooseneck Electric Kettle should have its price increased so that its Gross Margin Percentage goes above 30%.
+
+# 3. Why This Matters
+The cost of goods sold (COGS) has been increasing, which is reducing profit margins.
+If no action is taken, these products will continue to bring low returns and affect overall business performance.
+
+# 4. Expected Outcome
+By increasing prices or removing weak products, the company can:
+
+Improve overall profit margins
+Focus on more profitable products
+Build a stronger and more sustainable pricing strategy
+
